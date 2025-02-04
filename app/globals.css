@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Sidebar hover efekti */
+.hover-bg-light:hover {
+  background-color: rgba(0,0,0,0.05) !important;
+}
+
+/* Sidebar scroll bar stilleri */
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Sidebar menü stilleri */
+.submenu {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.menu-link {
+  transition: all 0.3s ease;
+}
+
+.menu-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding-left: 1.5rem !important;
+}
+
+.submenu .menu-link:hover {
+  padding-left: 2rem !important;
+}
+
+/* Collapse ok işareti animasyonu */
+[aria-expanded="true"] .bi-chevron-right {
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
+}
+
+.bi-chevron-right {
+  transition: transform 0.2s ease;
+}
+
+/* Global link ve buton stilleri */
+a, button, .btn, [role="button"] {
+  cursor: pointer;
+}
+
+/* Soft Buttons */
+.btn-soft-danger {
+  color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+  border-color: transparent;
+}
+
+.btn-soft-danger:hover {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-soft-danger:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* Submenu collapse animasyonu */
+.submenu-collapse {
+  display: block !important;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.submenu-collapse:not(.show) {
+  max-height: 0 !important;
+}
+
+.submenu-collapse.show {
+  max-height: 1000px !important;
+}
+
+/* Sidebar link stilleri */
+.sidebar a, 
+.sidebar button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar .nav-link:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+/* Logo hover efekti */
+.sidebar .logo-link {
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar .logo-link:hover {
+  opacity: 0.8;
+}
+
+/* Custom Soft Buttons */
+.custom-btn-soft-danger {
+  color: #dc3545 !important;
+  background-color: rgba(220, 53, 69, 0.1) !important;
+  border-color: transparent !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.custom-btn-soft-danger:hover {
+  color: #fff !important;
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+
+.custom-btn-soft-danger:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25) !important;
+}
